@@ -100,7 +100,9 @@
           }
         },
         "qa": {
-          "vocabulary": []
+          "vocabulary": [
+            "segment_id"
+          ]
         },
         "style": {
           "color": {

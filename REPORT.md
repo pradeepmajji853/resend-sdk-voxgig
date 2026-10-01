@@ -51,18 +51,27 @@ setting while retaining upstream notices. Classification: VOXGIG DX ISSUE,
 based on the generated output and license component. This project preserves
 Voxgig's notice and adds Pradeep's contribution notice through maintained assets.
 
-### Optional-component warnings need context
+### Clean-checkout fixture excluded by the generated ignore rule
 
-Expected: warnings distinguish incomplete output from optional extensions.
-Observed: generation logged missing `ReadmeFeatures_ts` and `AgentGuide_ts`
-components, yet exited successfully and emitted buildable code. Impact: a new
-user must investigate whether documentation is incomplete. Suggested improvement:
-label optional fallback behavior and explain any effect on output.
-Classification: VOXGIG DX ISSUE; no functional failure was established.
+Expected: committed fixtures support the same tests as local generation.
+Observed: GitHub CI passed 512 tests, failed one, and skipped one because
+`.sdk/.gitignore` used `log/`, excluding `test/entity/log/LogTestData.json`.
+`git check-ignore -v` confirmed the cause. Impact: local success concealed a
+missing fixture. Suggested improvement: anchor the rule as `/log/`.
+Classification: VOXGIG BUG. This minimal correction and the fixture are committed.
 
-The scaffold also reported two moderate dependency advisories and an `fs.F_OK`
-deprecation warning. These are DEPENDENCY/ENVIRONMENT observations, not proven
-SDK defects. They were not repaired during this assessment.
+### Documentation QA rejects an API identifier
+
+Expected: generated API names pass generated prose checks.
+Observed: GitHub documentation QA rejected `segment_id` in `SUMMARY.md`.
+Impact: documentation workflow failed despite successful code generation.
+Suggested improvement: include identifiers in the generated vocabulary.
+Classification: VOXGIG DX ISSUE. The supported project vocabulary setting now
+explicitly accepts this identifier.
+
+Generation also logged optional-component and deprecation warnings; the scaffold
+reported two moderate dependency advisories. No SDK defect was established from
+these warnings.
 
 ## Live API Verification
 
@@ -92,5 +101,6 @@ rate limits, and production suitability were not tested.
 ## Overall Observation
 
 The generator reached compiling code and passing tests quickly. The most
-useful improvements would clarify ownership configuration and optional warnings.
+useful improvements would preserve fixtures in clean checkouts and clarify
+ownership configuration.
 The authenticated read also succeeded, while broader API coverage remains untested.

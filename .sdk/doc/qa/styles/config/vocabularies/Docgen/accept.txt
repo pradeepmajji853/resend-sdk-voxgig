@@ -1293,3 +1293,4 @@ initialiser
 [Rr][Ee][Pp][Ll][Aa][Yy][Ee][Dd]
 [Ss][Uu][Cc][Cc][Ee][Ee][Dd][Ee][Dd]
 [Pp][Ee][Rr][Mm][Aa][Nn][Ee][Nn][Tt][Ll][Yy]
+[Ss][Ee][Gg][Mm][Ee][Nn][Tt]_[Ii][Dd]

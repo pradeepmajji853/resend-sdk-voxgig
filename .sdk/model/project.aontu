@@ -28,3 +28,6 @@ main: kit: {
   author: { name: 'Pradeep Majji', url: 'https://github.com/pradeepmajji853' }
   target: ts: publish: registry: package: 'resend-sdk-voxgig'
 }
+
+# API identifier used in generated prose; explicitly accepted by documentation QA.
+main: kit: doc: qa: vocabulary: ['segment_id']
