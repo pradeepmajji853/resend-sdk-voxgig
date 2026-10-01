@@ -6,6 +6,24 @@ Unofficial TypeScript client for [Resend](https://resend.com), generated with
 Not affiliated with or endorsed by Resend. Created for a Voxgig developer
 experience assessment; see [REPORT.md](REPORT.md).
 
+## Repository structure
+
+```text
+README.md       Setup, usage, and reproduction
+REPORT.md       Assessment results and developer experience findings
+SUMMARY.md      Generated API overview
+LICENSE, NOTICE License and upstream attribution
+ts/src/         Generated TypeScript SDK source
+ts/test/        Generated offline tests
+ts/REFERENCE.md Detailed API reference
+examples/       Read-only live verification example
+verification/   Sanitized execution results
+.sdk/           OpenAPI input, generator configuration, templates, and fixtures
+.github/        TypeScript CI and documentation checks
+```
+
+Build output (`ts/dist/` and `ts/dist-test/`) is created locally and ignored by Git.
+
 ## Install and test
 
 Use Node.js 24. The package has not been published to npm; build from this repository:

@@ -13056,6 +13056,11 @@
             "sdkrel": ""
           },
           "package": "@voxgig/sdkgen",
+          "phase": {
+            "agentguide": {
+              "active": false
+            }
+          },
           "provides": {
             "schema": true,
             "sekreto": true

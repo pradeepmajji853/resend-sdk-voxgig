@@ -31,3 +31,6 @@ main: kit: {
 
 # API identifier used in generated prose; explicitly accepted by documentation QA.
 main: kit: doc: qa: vocabulary: ['segment_id']
+
+# Keep the public repository focused on SDK users.
+main: kit: target: ts: phase: agentguide: active: false

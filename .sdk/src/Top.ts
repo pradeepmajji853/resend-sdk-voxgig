@@ -1,39 +1,7 @@
+import { cmp } from '@voxgig/sdkgen'
 
+// The root README, report, licenses, and workflows are maintained by this project.
+// Do not emit fleet publishing policies or AI-specific guide files.
+const Top = cmp(function Top() {})
 
-import {
-  cmp,
-  Deploy,
-  PublishWorkflow,
-  ReadmeTop,
-  AgentGuideTop,
-  License,
-  Security,
-  Changelog,
-} from '@voxgig/sdkgen'
-
-
-const Top = cmp(function Top(props: any) {
-  // README.md is maintained for this assessment; preserve it on regeneration.
-
-  // Agent onboarding guides at the project root: AGENTS.md + a thin CLAUDE.md,
-  // populated with the real target / feature / entity lists. Emitted outside
-  // any target Folder (same placement rule as ReadmeTop / Deploy).
-  AgentGuideTop({})
-
-  // LICENSE and NOTICE are maintained at the repository root.
-  Security({})
-  Changelog({})
-
-  // Root deployment Makefile: per-target `make deploy-<t>` (publish with
-  // credentials injected by the aql key vault) plus an all-targets
-  // `make deploy-dry` rehearsal.
-  Deploy({})
-
-  PublishWorkflow({})
-})
-
-
-export {
-  Top
-}
-
+export { Top }

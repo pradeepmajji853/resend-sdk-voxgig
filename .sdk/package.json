@@ -20,9 +20,7 @@
     "dry-add-feature": "voxgig-sdkgen -y feature add",
     "add-edition": "voxgig-sdkgen edition add",
     "text-qa": "cd .. && voxgig-docgen qa",
-    "postinstall": "node build/docgen.js",
-    "status": "bash admin/status.sh",
-    "check-drift": "bash admin/check-drift.sh"
+    "postinstall": "node build/docgen.js"
   },
   "author": "Resend",
   "license": "MIT",
